@@ -11,7 +11,7 @@ git clone https://github.com/chrisb13/mkpaper.git
 ```
 Dependencies
 ============                                                                                                                         
-* python                   
+* python 2.x              
 * pdflatex (optional)
 * python-docx (optional)
 
@@ -102,3 +102,5 @@ Affiliation: Climate Change Research Centre and ARC Centre of Excellence for Cli
 Contact: z3457920@student.unsw.edu.au                                         
 www:     christopherbull.com.au                                               
 twitter: @ChrisBullOceanO                
+
+See also: [blog post](http://christopherbull.com.au/python/programmatic-paper-mkpaper/)
