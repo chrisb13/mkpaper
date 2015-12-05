@@ -3,6 +3,8 @@ Python library for compiling a PDF or Word doc of Figures.
 
 LaTeX option assumes pdf figures and word doc assumes png figures.
 
+This software has only been tested on Linux.
+
 Installation
 ============
 
@@ -22,10 +24,10 @@ Without pdflatex, the package still works (you can create the tex file and not c
 
 To create a word doc you need [python-docx](https://python-docx.readthedocs.org/en/latest/) (installable with [Anaconda](https://www.continuum.io/downloads)). Inserted figures need to be in png.
 
-To install PDFLaTeX on linux machines, do:
+To install [PDFLaTeX on linux machines](http://linuxandfriends.com/install-latex-in-ubuntu-linux/), do:
 
 ```bash
-sudo apt-get install texlive-latex-base
+sudo apt-get install texlive-full
 ```
 
 Usage
