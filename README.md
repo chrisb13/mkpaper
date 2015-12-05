@@ -4,11 +4,13 @@ Python library for compiling a PDF or Word doc of Figures.
 LaTeX option assumes pdf figures and word doc assumes png figures.
 
 Installation
-============                     
+============
 
+Using Git clone the package to a local folder of your convenience...
 ```bash
 git clone https://github.com/chrisb13/mkpaper.git
 ```
+
 Dependencies
 ============                                                                                                                         
 * python 2.x              
@@ -18,6 +20,12 @@ Dependencies
 Without pdflatex, the package still works (you can create the tex file and not compile). Requires figures to be in pdf format.
 
 To create a word doc you need [python-docx](https://python-docx.readthedocs.org/en/latest/) (installable with [Anaconda](https://www.continuum.io/downloads)). Inserted figures need to be in png.
+
+To install PDFLaTeX on linux machines, do:
+
+```bash
+sudo apt-get install texlive-latex-base
+```
 
 Usage
 ============
