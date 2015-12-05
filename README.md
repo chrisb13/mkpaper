@@ -10,6 +10,7 @@ Using Git clone the package to a local folder of your convenience...
 ```bash
 git clone https://github.com/chrisb13/mkpaper.git
 ```
+If you don't have Git, click on 'download zip' on the top right of this page and extract to a folder called 'mkpaper'.
 
 Dependencies
 ============                                                                                                                         
