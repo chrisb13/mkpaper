@@ -195,6 +195,7 @@ class WordFigureDoc(object):
     ----------
     :wordfol: folder to put the word doc in. (Will be created if it doesn't exist.) Needs to be full path, not relative.
     :figdoctitle: name of figure document title (default is 'mkpaperfigure')
+    :figparagraph: opening paragraph that describes the purpose of the document (default is 'This doc is a figure container')
 
     Returns
     -------
@@ -226,7 +227,7 @@ class WordFigureDoc(object):
     >>> #insert the tail of the doc
     >>> figobj.end_doc()
     """
-    def __init__(self,wordfol,figdoctitle='mkpaperfigure'):
+    def __init__(self,wordfol,figdoctitle='mkpaperfigure',figparagraph=''):
         _lg.info("Creating word doc file in: " + wordfol)
         self.wordfol=wordfol
         self.figdoctitle=figdoctitle
@@ -235,8 +236,12 @@ class WordFigureDoc(object):
         from docx import Document
 
         self.document=Document()
+        if figparagraph=='':
+            self.document.add_paragraph("This doc is a figure container")
+        else:
+            self.document.add_paragraph(figparagraph)
+
         self.document.add_heading("Figure File", 0)
-        self.document.add_paragraph("This doc is a figure container")
 
     def add_figure(self,filepath,caption,unicodeme=False):
         """function to add figure and caption to word doc file.
