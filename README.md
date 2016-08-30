@@ -114,4 +114,4 @@ Contact: z3457920@student.unsw.edu.au
 www:     christopherbull.com.au                                               
 twitter: @ChrisBullOceanO                
 
-See also: [blog post](http://christopherbull.com.au/python/programmatic-paper-mkpaper/)
+See also: [blog post](http://christopherbull.com.au/python/python-package-mkpaper/)
