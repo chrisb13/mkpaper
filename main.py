@@ -243,12 +243,13 @@ class WordFigureDoc(object):
 
         self.document.add_heading("Figure File", 0)
 
-    def add_figure(self,filepath,caption,unicodeme=False):
+    def add_figure(self,filepath,caption,unicodeme=False,nopic=False):
         """function to add figure and caption to word doc file.
         
         :filepath: this needs to be a pdf file!
         :caption:  caption for said figure
         :unicodeme:  (optional) set to True if caption contains funky characters
+        :nopic:  (optional) set to True if you want just a caption and no picture
         :returns: 
 
         Notes
@@ -263,12 +264,16 @@ class WordFigureDoc(object):
         from docx.shared import Inches
         _lg.debug("Adding Figure: " + filepath)
 
-        self.document.add_picture(filepath,width=Inches(6.0))
+        if not nopic:
+            self.document.add_picture(filepath,width=Inches(6.0))
+
         if unicodeme:
             self.document.add_paragraph(unicode(caption,'utf-8'))
         else:
             self.document.add_paragraph(caption)
-        self.document.add_page_break()
+
+        if not nopic:
+            self.document.add_page_break()
         
     def end_doc(self):
         self.document.save(self.outname)
